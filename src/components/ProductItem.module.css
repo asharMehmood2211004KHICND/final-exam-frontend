@@ -1,0 +1,20 @@
+.ProductItem{
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+/* 
+.Mybutton{
+    background-color: aqua;
+} */
+
+.section{
+    display: flex;
+    flex-direction: column;
+    /* background-color: blueviolet; */
+    justify-content: space-between;
+}

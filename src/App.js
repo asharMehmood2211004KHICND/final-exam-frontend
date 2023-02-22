@@ -1,23 +1,42 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ProductsListPage } from './pages/ProductsListPage';
+import { ProductDetailPage } from './pages/ProductDetailPage';
+import { CartPage } from './pages/CartPage';
+import { CheckOutPage } from './pages/CheckOutPage';
 
 function App() {
+
+  const [productsList, setProductsList] = useState();
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <>
+
+        <Router>
+
+          <Routes>
+            <Route element={<><ProductsListPage /></>
+
+            } path="/" />
+
+            <Route element={<ProductDetailPage/>} path="/product/:id"/>
+            
+            <Route element={<CartPage/>} path="/cart"/> 
+
+            <Route element={<CheckOutPage/>} path="/checkout" ></Route>
+          
+          </Routes>
+
+        </Router>
+
+      </>
+
+
     </div>
   );
 }
