@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { ProductItem } from '../components/ProductItem';
-
+import styles from './ProductList.module.css';
 
 
 
@@ -31,11 +31,14 @@ const [products,setProducts] = useState([]);
     }
 
   return (
-    <div>ProductsListPage
-        sdvsdv
+    <>
+    <h3 className={styles.plistheading}>Products List Page </h3>
+    <div>
+        
         {console.log(products)}
 
             {products.map(product=>(<ProductItem name={product.name} shortDesc={product.shortDescription} price={product.price} image={product.imageLink} id={product.id}/>))}
     </div>
+    </>
   )
 }

@@ -1,3 +1,43 @@
-.CartItem{
-    border: 1px solid red;
-}
+.CartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .CartItem img {
+    margin-right: 10px;
+  }
+  
+  .CartItem h3 {
+    margin: 0;
+  }
+  
+  .CartItem h5 {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .CartItem h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .CartItem button {
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .heading{
+    font-size: 25px;
+    font-weight: bold;
+    color: #DAAD76;
+    display: flex;
+    justify-content: center;
+  }

@@ -1,7 +1,8 @@
 import React, { useState,useEffect } from 'react'
 import { Button } from '../components/Button';
 import { CartItem } from '../components/CartItem';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import styles from '../components/CartItem.module.css';
 
 
 export const CartPage = () => {
@@ -45,7 +46,8 @@ const checkout=()=>{
   return (
 
     <>
-    <div>CartPage
+    <h4 className={styles.heading}>Cart Page</h4>
+    <div>
       {/* {console.log(cart)} */}
       {cart.map(cart=>(<CartItem id={cart.id} name={cart.name} imageLink={cart.imageLink} quantity={cart.quantity} price={cart.price} totalPrice={cart.totalPrice}  />))}
     </div>

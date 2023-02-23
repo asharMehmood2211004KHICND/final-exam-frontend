@@ -6,6 +6,7 @@ import { ProductsListPage } from './pages/ProductsListPage';
 import { ProductDetailPage } from './pages/ProductDetailPage';
 import { CartPage } from './pages/CartPage';
 import { CheckOutPage } from './pages/CheckOutPage';
+import { Header } from './components/Header';
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
     <div className="App">
 
       <>
-
+    <Header></Header>
         <Router>
 
           <Routes>

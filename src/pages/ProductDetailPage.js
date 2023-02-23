@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import { Button } from '../components/Button';
-// import styles from './ProductDetail.module.css';
+import styles from './ProductDetail.module.css';
 import usePostData  from '../hooks/usePostData'
 
 
@@ -69,23 +69,23 @@ export const ProductDetailPage = () => {
 
     return (
         // className={styles.body}
-        <div>
-            <img src={product.imageLink} alt={product.name} width="500px" height="300px"></img>
-            <h1>{product.name}</h1>
-            <div><p>{product.longDescription}</p></div>
-            <h2>price : {product.price}</h2>
+        <div className={styles.productdetail}>
+            <img className={styles.productdetailimg } src={product.imageLink} alt={product.name} ></img>
+            <h1 className={styles.productdetailname}>{product.name}</h1>
+            <div className={styles.productdetailp}><p >{product.longDescription}</p></div>
+            <h2 className={styles.productdetailh2}>price : {product.price}</h2>
             
 
             <div>
-                <button onClick={add} >+</button>
+                <button className={styles.productbutton} onClick={add} >+</button>
                 {/* <h4>{quantity}</h4> */}
                 {/* <button onClick={decrease} >-</button> */}
-                <h4>{detailQuantity}</h4>
-                <button onClick={remove} >-</button>
+                <h4 className={styles.productdetailquantity}>{detailQuantity}</h4>
+                <button className={styles.productbutton}  onClick={remove} >-</button>
 
             </div>
                     <br></br>
-            <div>
+            <div className={styles.productdetailbutton}>  
                 <Button buttonOnClick={addToCart} text={"add to cart 2"} ></Button>
             </div>
 
