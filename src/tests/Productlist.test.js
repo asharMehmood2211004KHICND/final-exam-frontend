@@ -9,16 +9,16 @@ describe('ProductsListPage', () => {
       {
         id: 1,
         name: 'Product 1',
-        shortDescription: 'Short description of product 1',
+        shortDescription: 'Short description',
         price: 10,
-        imageLink: 'https://example.com/product1.png',
+        imageLink: 'product1.png',
       },
       {
         id: 2,
         name: 'Product 2',
         shortDescription: 'Short description of product 2',
         price: 20,
-        imageLink: 'https://example.com/product2.png',
+        imageLink: 'product2.png',
       },
     ];
     jest.spyOn(global, 'fetch').mockResolvedValue({
@@ -32,7 +32,6 @@ describe('ProductsListPage', () => {
 
     // Check that product list items are rendered
     expect(screen.getByText('Products List Page')).toBeInTheDocument();
-    // expect(screen.getByText('Product 1')).toBeInTheDocument();
-    // expect(screen.getByText('Product 2')).toBeInTheDocument();
+    
   });
 });
