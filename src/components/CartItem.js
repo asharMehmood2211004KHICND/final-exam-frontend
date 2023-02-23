@@ -47,10 +47,14 @@ export const CartItem = ({id,name,imageLink,quantity,price,totalPrice}) => {
 
         <div>
         <h3> name: {name}</h3>
+        <br></br>
         {/* <Image imgLink={imageLink} ></Image> */}
-        <h5> quantity : {quantity} </h5>
-        <h3>{price}</h3>
-        <h4>{totalPrice}</h4>
+        <h3> quantity : {quantity} </h3>
+        <br></br>
+        <h3> price per unit :  { Number(price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })) }</h3>
+        <br></br>
+        <h4> total price :  { Number(totalPrice.toLocaleString('en-US', { style: 'currency', currency: 'USD' })) }</h4>
+        <br></br>
         <img src={imageLink} width="100px" height="100px" ></img>
 
         

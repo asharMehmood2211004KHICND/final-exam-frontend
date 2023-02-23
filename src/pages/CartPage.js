@@ -55,9 +55,12 @@ const checkout=()=>{
     <Button buttonOnClick={backToShopping} text={"back to shopping"}></Button>
     <br></br>
     <Button buttonOnClick={checkout} text={"checkout"}></Button>
-    <div>
-      
+    <div  >
+      <h3> total price :
       {cart.map(cart=> Number(cart.totalPrice) ).reduce((accumulator, currentValue) => accumulator + currentValue, 0)}
+
+      </h3>
+      
        </div>
 
        {/* <div>  total cost : {accumulator}</div>  */}
